@@ -13,8 +13,7 @@ styleUrls: ['./app.component.css']
 })
 export class AppComponent {
 title = 'angular7crud';
-constructor(private _loadingBar: SlimLoadingBarService, private _router: Rout
-er) {
+constructor(private _loadingBar: SlimLoadingBarService, private _router: Router) {
 this._router.events.subscribe((event: Event) => {
 this.navigationInterceptor(event);
 });
