@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RomanNumbersService } from '../roman-numbers.service';
 
 @Component({
   selector: 'app-crud-get',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrudGetComponent implements OnInit {
 
-  constructor() { }
+  number: number;
+  convert: any;
+
+  constructor(
+   private ATR: RomanNumbersService
+  ) { }
 
   ngOnInit() {
+  }
+
+  arabicToRoman(){
+    this.convert = this.ATR.arabicToRoman(this.number);
   }
 
 }
